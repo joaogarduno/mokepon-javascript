@@ -15,13 +15,17 @@ function selectPetsPlayer(){
     let inputSelect2 = document.querySelector('#capipepo');
     let inputSelect3 = document.querySelector('#ratigueya');
 
-    // CONDITION
+    // VARIABLES DE NOMBRE DE JUGADORES
+    let playerName = document.querySelector('#namePlayer');
+    let playerNameEnemy = document.querySelector('#namePlayerEnemy');
+
+    // CONDITION USER PET NAME
     if (inputSelect1.checked){
-        alert('seleccionaste a Hipodoge');
+        playerName.innerHTML = 'Hipodoge';
     } else if(inputSelect2.checked){
-        alert('seleccionaste a Capipepo');
+        playerName.innerHTML = 'Capipepo';
     } else if(inputSelect3.checked){
-        alert('Seleccionaste a Ratigueya');
+        playerName.innerHTML = 'Ratigueya';
     } else{
         alert('No seleccionaste ninguna mascota');
     }

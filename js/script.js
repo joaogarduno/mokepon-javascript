@@ -1,5 +1,6 @@
 // DECLARE GLOBAL VARIABLES
 let attackPlayer;
+let attackEnemy;
 
 function startToPlay(){
     // SELECCIONAMOS ELEMENTOS
@@ -48,13 +49,13 @@ function selectPetsPlayer(){
 
 // FUNCION SELECCIONAR MASCOTA DEL ENEMIGO
 function selectPetEnemy(){
-    let randomAttack = aleatorio(1,3);
+    let randomPetSelect = aleatorio(1,3);
     let playerNameEnemy = document.querySelector('#namePlayerEnemy');
 
-    if(randomAttack == 1){
+    if(randomPetSelect == 1){
         // 
         playerNameEnemy.innerHTML = 'Hipodoge';
-    } else if(randomAttack == 2){
+    } else if(randomPetSelect == 2){
         // 
         playerNameEnemy.innerHTML = 'Capipepo';
     } else{
@@ -70,17 +71,37 @@ function selectPetEnemy(){
 // Aqui van las funciones de los ataques segun cual fue el botón que dieron click
 function attackFire(){
     attackPlayer = 'FUEGO'
-    alert
+    randomtAttackEnemy();
 }
 function attackWater(){
     attackPlayer = 'AGUA'
+    randomtAttackEnemy();
 }
 function attackEarth(){
     attackPlayer = 'TIERRA'
+    randomtAttackEnemy();
 }
 // function typeOfAttack(){
 //     let playerAttack = 
 // }
+
+// FUNCION DE SELECCION DE ATAQUE DEL ENEMIGO
+// ¿Donde guardamos los atques de nuestro enemigo? obviamente tienen que ser aleatorios pero donde los guardamos
+function randomtAttackEnemy(){
+    let randomAttack = aleatorio(1,3);
+
+    if(randomAttack == 1){
+        randomAttack = 'Fuego';
+    } else if(randomAttack == 2){
+        randomAttack = 'Agua';
+    } else{
+        randomAttack = 'Tierra';
+    }
+}
+
+
+// FUNCION PARA MANDAR LOS MENSAJES A LOS JUGADORES
+
 
 // Accion que nos diga cual es la variable la mascota que seleccionaron los enemigo
 
